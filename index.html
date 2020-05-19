@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HKS Consulting</title>
+  <link rel="stylesheet" href="./dist/css/all.min.css">
 </head>
+
 <body>
   <!-- header -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">
+      <img src="./assets/img/hks-logo.svg" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Plans & Pricing</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Resources
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Action</a>
@@ -33,19 +43,74 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <form class="my-2 my-lg-0">
+        <img src="./assets/icon/icon-login.svg" alt="">
       </form>
     </div>
   </nav>
   <!-- header -->
+  <div class="banner-box">
+    <div class="container pt-4">
+      <h2>Video playing</h2>
+    </div>
+  </div>
+  <!-- main -->
+  <main class="container pt-4">
+    <h4>Video Name</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aliquam quisquam repellat, velit ipsum quibusdam voluptatibus quae tempore sapiente excepturi quidem architecto nulla placeat eum voluptate commodi dolores ex illum?</p>
+  <!-- video -->
+  <video id="myVideo" width="320" height="176" controls>
+      <!-- <source src="videoplayback.mp4" type="video/mp4"> -->
+      <source src="videoplayback.mp4" type="video/mp4">
+  
+      Your browser does not support HTML5 video.
+    </video>
+  
+    <p>Playback position: <span id="demo"></span></p>
+  <!-- video -->
+  </main>
+  <!-- main -->
+<!-- footer -->
+<!-- footer -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="./dist/js/popper.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+  <script>
+      // Get the video element with id="myVideo"
+      var vid = document.getElementById("myVideo");
+      var is_p = true;
+      // Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
+      vid.ontimeupdate = function () {
+        is_p = myFunction(is_p)
+      };
+  
+      function myFunction(is_p) {
+        // Display the current position of the video in a p element with id="demo"
+        document.getElementById("demo").innerHTML = vid.currentTime;
+  
+        //testing
+        if ((vid.currentTime > 10 && vid.currentTime < 15 || vid.currentTime > 20 && vid.currentTime < 25 || vid
+            .currentTime > 30 && vid.currentTime < 45)) {
+          // is_p = false;
+          if (is_p) {
+  
+            vid.pause();
+            document.getElementById("demo").innerHTML = "HAHAHAHA";
+            if (confirm(is_p)) {
+              is_p = false;
+  
+              vid.play();
+            }
+          }
+        } else {
+          is_p = true;
+  
+          document.getElementById("demo").innerHTML = "nonono";
+        }
+        return is_p;
+      }
+    </script>
 </body>
+
 </html>
