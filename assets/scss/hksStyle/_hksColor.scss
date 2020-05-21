@@ -8,16 +8,15 @@ $gray-300: #dee2e6 !default;
 $gray-400: #D6D6D6 !default;
 $gray-500: #adb5bd !default;
 $gray-600: #848383 !default;
-$gray-700: #707070 !default;
+$gray-700: #767676 !default;
 $gray-800: #414141 !default;
 $gray-900: #212529 !default;
 $black:    #141414 !default;
 //
-//header defult color
-$nb-red: #e21836 !default;
-$nb-red-600: #D1102D !default;
-$nb-loyalty: #a58520 !default;
-$nb-loyalty-600: #997a16 !default;
+//hks
+$hks-blue: #4B8ED1 !default;
+$hks-blue-600: #455FA5 !default;
+$hks-gray: #767676 !default;
 //header hover color
 $ap-pink-200: #F4E2E3 !default;
 $ap-pink-600: #FBAFB8 !default;
@@ -43,9 +42,9 @@ $ap-yellow-600: #fee100 !default;
 .gray-800 {color:$gray-800;}
 .gray-900 {color:$gray-900;}
 .black  {color:$black;}
-.nb-red{color: $nb-red;}
-.nb-red-600{color: $nb-red-600;}
-.nb-loyalty{color: $nb-loyalty;}
+//hks
+.hks-blue{color: $hks-blue;}
+.hks-blue-600{color: $hks-blue-600;}
 //
 .ap-pink-200  {color:$ap-pink-200;}
 .ap-pink-600  {color:$ap-pink-600;}

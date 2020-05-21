@@ -1,4 +1,22 @@
 .banner-box{
   background-color: #E4F2F3;
   height: 200px;
+  .banner-text{
+    padding-top: 68px;
+  }
+}
+.qa-box{
+  background-color: #F4F4F4;
+  height: 100%;
+}
+.header-bg{
+  background-color: $white;
+}
+.video-box{
+  width: 100%;
+}
+.footer-box{
+  a{
+    color: inherit;
+  }
 }

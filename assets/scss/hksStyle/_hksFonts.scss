@@ -49,6 +49,14 @@ $leading: 21px 27px 30px 36px 48px 60px 84px;
 //   font-family: "Raleway", sans-serif;
 // }
 //100>thin
+.text-r-0-1-0{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  @media screen and (max-width: 500px) {
+    font-size: 12px;
+  }
+}
 .text-r-1-1-1{
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
