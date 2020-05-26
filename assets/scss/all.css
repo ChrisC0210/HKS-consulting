@@ -10765,13 +10765,125 @@ a.text-dark:focus, a.text-dark:hover {
   width: 100%;
 }
 
+.footer-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .footer-box a {
   color: inherit;
+}
+
+.banner-homepage {
+  height: 100vh;
+  background-color: #F2F2F2;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner-homepage a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.banner-homepage-content {
+  position: relative;
+}
+
+.services-box {
+  border: solid 1px #4B8ED1;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .btn-primary {
   background-color: #4B8ED1;
   border-color: #4B8ED1;
   padding: 8px 50px 8px 50px;
+}
+
+.btn-pricing {
+  background-color: #4B8ED1;
+  border-color: #4B8ED1;
+  padding: 8px 50px 8px 50px;
+  border-radius: 40px;
+}
+
+.btn-pricing a {
+  color: #fefefe;
+}
+
+.btn-pricing a :hover, .btn-pricing aactive {
+  background-color: #455FA5;
+  border-color: #455FA5;
+}
+
+.card-primary-box {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-primary-box .card-primary-content {
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+.card-primary-box .primary-box-img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 20px;
+}
+
+.card-primary-box .primary-box-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #b5b5b5;
+}
+
+.card-second-box {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-second-box .card-second-content {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card-second-box .card-second-border {
+  border: solid 1px #fefefe;
+  -webkit-box-shadow: 0 0 0.5em #8a8a8a;
+          box-shadow: 0 0 0.5em #8a8a8a;
+  padding: 20px;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=all.css.map */
