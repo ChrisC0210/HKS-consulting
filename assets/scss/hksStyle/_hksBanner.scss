@@ -23,7 +23,10 @@
 }
 .banner-homepage{
   height: 100vh;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2ee;
+  //opacity: 0.5;
+  background-image: url("http://www.vela.hk/law/html/HKS-consulting/assets/img/banner1.png");
+  background-size: cover;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -35,6 +38,7 @@
 }
 .banner-homepage-content{
   position: relative;
+  text-shadow: 0.1em 0.1em 0.2em $white;
 }
 .services-box{
   border: solid 1px $hks-blue;
