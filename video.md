@@ -98,28 +98,72 @@
   <!-- Q&A -->
   <!-- modal -->
   <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" id="modal" data-toggle="modal">
+    Launch demo modal
+  </button>
+
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Hello</h5>
-          <button type="button" id="vidCloseX" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Are You Still Watching?</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" id="vidClose" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   <!-- modal -->
+  <!-- onload popup -->
+  <div id="enquirypopup" class="modal fade in" role="dialog">
+      <div class="modal-dialog">
+        
+        <!-- Modal content-->
+        <div class="modal-content row">
+          <div class="modal-header custom-modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Enquire Now</h4>
+          </div>
+          <div class="modal-body">
+            <form name="info_form" class="form-inline" action="#" method="post">
+              <div class="form-group col-sm-12">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
+              </div>
+              <div class="form-group col-sm-12">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
+              </div>
+              <div class="form-group col-sm-12">
+                <input type="text" class="form-control" name="checkin" id="cheeckin" placeholder="Check-In Date">
+              </div>
+              <div class="form-group col-sm-12">
+                <input type="text" class="form-control" name="checkout" id="cheeckout" placeholder="Check-Out Date">
+              </div>
+              <div class="form-group col-sm-12">
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone">
+              </div>
+              
+              <div class="form-group col-sm-12">
+                <textarea class="form-control" id="msg" name="msg" rows="4" placeholder="Enter Message"></textarea>
+              </div>
+              <div class="form-group col-sm-12">
+                <button type="submit" class="btn btn-default pull-right">Submit</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
   <!-- footer -->
   <div
     class="container d-flex justify-content-lg-between flex-lg-row flex-md-column flex-sm-column footer-box text-r-0-1-0 pt-4 pb-2">
@@ -149,21 +193,15 @@
           .currentTime > 30 && vid.currentTime < 45)) {
         // is_p = false;
         if (is_p) {
-          //alert("Good! Keep Watching!");
-          //setInterval('alert("#exampleModal");', 3000);
-          setTimeout(function () {
-            $('#exampleModal').modal('show');
-            vid.pause();
-          }, 1000)
-          
-        };
-        
+          alert("Good! Keep Watching!");
 
-        document.getElementById("demo").innerHTML = "ERRRR";
-        if (is_p) {
-          is_p = false;
+          vid.pause();
+          document.getElementById("demo").innerHTML = "ERRRR";
+          if (is_p) {
+            is_p = false;
 
-          vid.play();
+            vid.play();
+          }
         }
       } else {
         is_p = true;
@@ -172,10 +210,40 @@
 
       }
       return is_p;
-    };
-
+    }
   </script>
-
+  <script>
+    $(document).ready(function () {
+      $('#modal').click(function () {
+        $('#exampleModal').modal('show');
+        setTimeout(function () {
+          $('#exampleModal').modal('show');
+        }, 1000);
+      });
+      //
+      $(window).load(function(){
+        setTimeout(function() {
+                $('#enquirypopup').modal('show');
+        }, 3000);
+            });  
+    });
+  </script>
+  
 </body>
 
 </html>
+
+
+///
+  <script>
+          setInterval(function () {
+            $('#exampleModal').modal('show');
+            vid.pause();
+            }, 10000);   
+  </script>
+  vid.play();
+
+
+  $( "p" ).click(function() {
+  $( this ).slideUp();
+});
