@@ -155,9 +155,15 @@
             $('#exampleModal').modal('show');
             vid.pause();
           }, 1000)
-          
+
         };
-        
+
+        $("#vidCloseX").click(function () {
+          vid.play();
+        });
+        $("#vidClose").click(function () {
+          vid.play();
+        });
 
         document.getElementById("demo").innerHTML = "ERRRR";
         if (is_p) {
@@ -173,7 +179,6 @@
       }
       return is_p;
     };
-
   </script>
 
 </body>
