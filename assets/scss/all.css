@@ -10810,30 +10810,6 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 20px;
 }
 
-.img-big {
-  margin-bottom: 20px;
-}
-
-.img-big img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.teacher-img {
-  width: 100px;
-  height: 100px;
-  background-color: #717171;
-}
-
-.teacher-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-}
-
 .btn-primary {
   background-color: #4B8ED1;
   border-color: #4B8ED1;
@@ -10918,5 +10894,29 @@ a.text-dark:focus, a.text-dark:hover {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.img-big {
+  margin-bottom: 20px;
+}
+
+.img-big img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.teacher-img {
+  width: 100px;
+  height: 100px;
+  background-color: #717171;
+}
+
+.teacher-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=all.css.map */
