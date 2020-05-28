@@ -54,3 +54,14 @@
     object-fit: cover;
   }
 }
+.teacher-img{
+  width: 100px;
+  height: 100px;
+  background-color: #717171;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

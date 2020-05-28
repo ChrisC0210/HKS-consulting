@@ -54,11 +54,17 @@
     </div>
   </div>
   <!-- main -->
-  <main class="container pt-4">
-    <h4>Video Name</h4>
+  <main class="container pt-4 text-r-1-3-1">
+    <h4 class="text-r-4-5-4 hks-blue-600">Video Name</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aliquam quisquam repellat, velit ipsum quibusdam
       voluptatibus quae tempore sapiente excepturi quidem architecto nulla placeat eum voluptate commodi dolores ex
       illum?</p>
+    <div class="d-flex flex-row mb-4">
+      <div class="mr-4 text-r-1-5-1">
+        Last updated: 5/2020</div>
+      <div class="text-r-1-5-1">155,771 students enrolled</div>
+    </div>
+
     <!-- video -->
     <video id="myVideo" class="video-box" controls>
       <!-- <source src="videoplayback.mp4" type="video/mp4"> -->
@@ -69,6 +75,39 @@
       <p>Playback position: <span id="demo"></span></p>
     </div>
     <!-- video -->
+
+    <!-- course -->
+    <div class="mb-4 text-r-1-3-1">
+      <h4 class="mt-4 text-r-3-5-3 hks-blue-600">This course includes</h4>
+      <p><span class="pr-2 hks-blue">●</span>38 hours on-demand video</p>
+      <p><span class="pr-2 hks-blue">●</span>219 downloadable resources</p>
+      <p><span class="pr-2 hks-blue">●</span>29 articles</p>
+      <p><span class="pr-2 hks-blue">●</span>Full lifetime access</p>
+      <p><span class="pr-2 hks-blue">●</span>Certificate of Completion</p>
+    </div>
+    <div class="mb-4 text-r-1-3-1">
+      <h4 class="mt-4 text-r-3-5-3 hks-blue-600">What you'll learn</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aliquam quisquam repellat, velit ipsum
+        quibusdam voluptatibus quae tempore sapiente excepturi quidem architecto nulla placeat eum voluptate commodi
+        dolores ex illum</p>
+    </div>
+    <div class="mb-4 text-r-1-3-1">
+      <h4 class="mt-4 text-r-3-5-3 hks-blue-600">Instructor</h4>
+      <div class="d-flex flex-row mb-2">
+        <div class="teacher-img">
+          <img src="./assets/img/banner2.jpg" alt="">
+        </div>
+        <div class="ml-2 mt-3">
+          <div class="text-r-3-5-3">Teacher's name</div>
+          <div>Job title Job title</div>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aliquam quisquam repellat, velit ipsum
+        quibusdam voluptatibus quae tempore sapiente excepturi quidem architecto nulla placeat eum voluptate commodi
+        dolores ex illum</p>
+    </div>
+    <!-- course -->
+
   </main>
   <!-- main -->
 
@@ -135,56 +174,56 @@
   <script type="text/javascript" src="./dist/js/popper.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
   <script>
-    // Get the video element with id="myVideo"
-    var vid = document.getElementById("myVideo");
-    var is_p = true;
-    //var isWatching = alert("Good! Keep Watching!");
-    // Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
-    vid.ontimeupdate = function () {
-      is_p = myFunction(is_p);
-    };
-
-    function myFunction(is_p) {
-      // Display the current position of the video in a p element with id="demo"
-      document.getElementById("demo").innerHTML = vid.currentTime;
-
-      //testing
-      if ((vid.currentTime > 10 && vid.currentTime < 15 || vid.currentTime > 20 && vid.currentTime < 25 || vid
-          .currentTime > 30 && vid.currentTime < 45)) {
-        // is_p = false;
-        if (is_p) {
-          //alert("Good! Keep Watching!");
-          //setInterval('alert("#exampleModal");', 3000);
-          setTimeout(function () {
-            $('#exampleModal').modal('show');
-            vid.pause();
-          }, 1000)
-
-        };
-
-        $("#vidCloseX").click(function () {
-          vid.play();
-        });
-        $("#vidClose").click(function () {
-          vid.play();
-        });
-
-        document.getElementById("demo").innerHTML = "ERRRR";
-        if (is_p) {
-          is_p = false;
-
-          vid.play();
+      // Get the video element with id="myVideo"
+      var vid = document.getElementById("myVideo");
+      var is_p = true;
+      //var isWatching = alert("Good! Keep Watching!");
+      // Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
+      vid.ontimeupdate = function () {
+        is_p = myFunction(is_p);
+      };
+  
+      function myFunction(is_p) {
+        // Display the current position of the video in a p element with id="demo"
+        document.getElementById("demo").innerHTML = vid.currentTime;
+  
+        //testing
+        if ((vid.currentTime > 10 && vid.currentTime < 15 || vid.currentTime > 20 && vid.currentTime < 25 || vid
+            .currentTime > 30 && vid.currentTime < 4500)) {
+          // is_p = false;
+          if (is_p) {
+            //alert("Good! Keep Watching!");
+            //setInterval('alert("#exampleModal");', 3000);
+            setTimeout(function () {
+              $('#exampleModal').modal('show');
+              vid.pause();
+            }, 1000)
+  
+          };
+  
+          $("#vidCloseX").click(function () {
+            vid.play();
+          });
+          $("#vidClose").click(function () {
+            vid.play();
+          });
+  
+          document.getElementById("demo").innerHTML = "ERRRR";
+          if (is_p) {
+            is_p = false;
+  
+            vid.play();
+          }
+        } else {
+          is_p = true;
+  
+          document.getElementById("demo").innerHTML = "Watching...";
+  
         }
-      } else {
-        is_p = true;
-
-        document.getElementById("demo").innerHTML = "Watching...";
-
-      }
-      return is_p;
-    };
-  </script>
-
+        return is_p;
+      };
+    </script>
+  
 </body>
 
 </html>
