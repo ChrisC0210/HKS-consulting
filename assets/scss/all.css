@@ -10810,6 +10810,16 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 20px;
 }
 
+.img-big {
+  margin-bottom: 20px;
+}
+
+.img-big img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .btn-primary {
   background-color: #4B8ED1;
   border-color: #4B8ED1;
@@ -10888,5 +10898,11 @@ a.text-dark:focus, a.text-dark:hover {
           box-shadow: 0 0 0.5em #8a8a8a;
   padding: 20px;
   border-radius: 10px;
+}
+
+.class-card .card-img-top {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=all.css.map */
