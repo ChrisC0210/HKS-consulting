@@ -10919,4 +10919,13 @@ a.text-dark:focus, a.text-dark:hover {
      object-fit: cover;
   border-radius: 50%;
 }
+
+.breadcrumb {
+  background-color: #fefefe;
+  padding: .75rem 0rem;
+}
+
+.breadcrumb a {
+  color: #4B8ED1;
+}
 /*# sourceMappingURL=all.css.map */

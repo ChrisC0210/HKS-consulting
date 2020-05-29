@@ -7,3 +7,11 @@
 @import "../scss/hksStyle/hksBtn";
 @import "../scss/hksStyle/hksCard";
 @import "../scss/hksStyle/hksImg";
+.breadcrumb{
+  background-color: $white;
+  //background-color: red;
+  padding: .75rem 0rem;
+  a{
+    color: $hks-blue;
+  }
+}
