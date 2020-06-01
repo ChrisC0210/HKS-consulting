@@ -12,41 +12,46 @@
 
 <body>
   <!-- header -->
-  <nav class="container navbar navbar-expand-lg navbar-light header-bg">
-    <a class="navbar-brand" href="./">
-      <img src="./assets/img/hks-logo.svg" alt="">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#aboutUs">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#plansPricing">Plans & Pricing</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Resources
+  <div class="navbar navbar-expand-lg navbar-light sticky-top header-bg">
+      <nav class="container" style="width: 100%;">
+          <a class="navbar-brand" href="./">
+            <img src="./assets/img/hks-logo.svg" alt="">
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="./video.html">Video playing</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#aboutUs">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#plansPricing">Plans & Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Resources
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="./video.html">Video playing</a>
+                  <a class="dropdown-item" href="./courses.html">Courses</a>
+                </div>
+              </li>
+            </ul>
+            <form class="my-2 my-lg-0">
+              <a href="#">
+              <img src="./assets/icon/icon-login.svg" alt="">
+              </a>
+            </form>
           </div>
-        </li>
-      </ul>
-      <form class="my-2 my-lg-0">
-        <img src="./assets/icon/icon-login.svg" alt="">
-      </form>
-    </div>
-  </nav>
+        </nav>
+  </div>
   <!-- header -->
   <div class="banner-homepage">
     <div class="banner-homepage-content">
@@ -66,7 +71,7 @@
     <div class="container col-lg-10 col-sm-12 mt-4 mb-4">
       <h4 class="text-center mb-4 text-r-4-5-4 hks-blue-600">User are viewing</h4>
       <!-- card all-->
-      <div class="card-columns">
+      <div class="card-columns animate__animated">
         <!-- card -->
         <div class="card class-card">
           <img class="card-img-top" src="./assets/img/class1.jpg" alt="Card image cap">
@@ -151,7 +156,7 @@
   <div class="pt-4 pb-4">
     <div class="container col-lg-10 col-sm-12 mt-4 mb-4">
       <h4 class="text-center mb-4 text-r-4-5-4 hks-blue-600" id="services">Services</h4>
-      <div class=" img-big">
+      <div class="img-big animate__animated">
         <img src="./assets/img/banner2.jpg" alt="">
       </div>
       <div class="text-center services-box">
@@ -173,7 +178,7 @@
   <div class="container col-lg-10 col-sm-12 mt-4 mb-4">
     <h4 class="text-center mb-4 text-r-4-5-4 hks-blue-600" id="plansPricing">Plans & Pricing </h4>
     <div class="d-flex justify-content-center col-12">
-      <div class="d-flex align-content-between flex-sm-column flex-lg-row card-second-box">
+      <div class="d-flex align-content-between flex-sm-column flex-lg-row card-second-box animate__animated">
         <!-- card start -->
         <div class="d-flex flex-column card-second-content col-lg-4 col-sm-12 text-left">
           <div class="card-second-border">
@@ -257,6 +262,7 @@
   </div>
 
   <!-- Plans & Pricing -->
+
   <!-- footer -->
   <div
     class="container d-flex justify-content-lg-between flex-lg-row flex-md-column flex-sm-column footer-box text-r-0-1-0 pt-4 pb-2">
@@ -267,6 +273,35 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="./dist/js/popper.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var services = $("#services");
+      var pos = services.position();
+      $(window).scroll(function () {
+        var windowpos = $(window).scrollTop();
+        if (windowpos >= pos.top & windowpos >= 900) {
+          //services.addClass("stick");
+          $('.img-big').addClass('animate__backInUp');
+
+        } else {
+          //services.removeClass("stick");
+          $('.img-big').removeClass('animate__backInUp');
+        }
+      });
+      //
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $('.card-columns').addClass('animate__fadeInUp');
+          $('.card-second-box').addClass('animate__fadeInUp animate__delay-3s');
+        } else {
+          $('.card-columns').removeClass('animate__fadeInUp');
+          $('.card-second-box').removeClass('animate__fadeInUp animate__delay-3s');
+        };
+      });
+      //
+    });
+  </script>
+
 </body>
 
 </html>
