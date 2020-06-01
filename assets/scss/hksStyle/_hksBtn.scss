@@ -10,7 +10,7 @@
   border-radius: 40px;
   a{
   color: $white;
-  :hover,&active{
+  :hover,:active{
     background-color: $hks-blue-600;
     border-color: $hks-blue-600;
   } 

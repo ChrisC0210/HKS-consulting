@@ -10829,7 +10829,7 @@ a.text-dark:focus, a.text-dark:hover {
   color: #fefefe;
 }
 
-.btn-pricing a :hover, .btn-pricing aactive {
+.btn-pricing a :hover, .btn-pricing a :active {
   background-color: #455FA5;
   border-color: #455FA5;
 }
@@ -10877,6 +10877,17 @@ a.text-dark:focus, a.text-dark:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.card-second-box :hover, .card-second-box :active {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.card-second-box :hover .card-second-border, .card-second-box :active .card-second-border {
+  -webkit-box-shadow: 0 0 0.5em #fefefe;
+          box-shadow: 0 0 0.5em #fefefe;
+  border: solid 2px #455FA5;
 }
 
 .card-second-box .card-second-content {
